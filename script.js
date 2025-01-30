@@ -22,3 +22,32 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       message.style.display = 'none';
     }, 3000); // Hide message after 3 seconds
   }
+
+
+
+  document.addEventListener("scroll", () => {
+    const sections = document.querySelectorAll("section"); // All sections
+    const navLinks = document.querySelectorAll("nav a"); // Navigation links
+  
+    let currentSectionId = "";
+  
+    // Check which section is in the viewport
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop; // Distance from top of page
+      const sectionHeight = section.offsetHeight;
+      const sectionBottom = sectionTop + sectionHeight;
+  
+      // If the scroll position is within the section
+      if (window.scrollY >= sectionTop - 50 && window.scrollY < sectionBottom - 50) {
+        currentSectionId = section.getAttribute("id");
+      }
+    });
+  
+    // Highlight the corresponding nav link
+    navLinks.forEach((link) => {
+      link.classList.remove("active"); // Remove active class from all links
+      if (link.getAttribute("href") === `#${currentSectionId}`) {
+        link.classList.add("active"); // Add active class to the current link
+      }
+    });
+  });
