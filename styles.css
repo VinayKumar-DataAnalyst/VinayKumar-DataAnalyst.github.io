@@ -1,0 +1,659 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* Header */
+header {
+  height : 180px;
+  background: #333;
+  color: #fff;
+  padding: 0.5rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding: 1 2rem;
+}
+
+body {
+  padding-top : 180px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f9;
+}
+
+.header-content {
+ 
+  text-align: left;
+  margin-top: 2rem;
+  display: flex;
+  align-items: end;
+  gap: 20px;
+  padding: 20px;
+}
+
+#download-message {
+  display: none;
+  color: green;
+  font-weight: bold;
+  animation: fade-in-out 3s;
+}
+
+@keyframes fade-in-out {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+
+.profile-photo {
+  margin-top: -13px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Navigation */
+nav {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: #0073e6;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #005bb5;
+  color: #fff;
+}
+
+.active {
+  background-color: #0073e6;
+  color: #fff;
+}
+
+
+
+/* Certifications Section */
+
+/* Certifications Section */
+#certifications {
+  text-align: left;
+  margin: 2rem auto;
+  max-width: 1200px; /* Increase max width to fit more cards in a row */
+}
+
+#certifications h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #0073e6;
+  padding-bottom: 0.5rem;
+}
+
+/* Grid Layout for Certifications */
+.certifications-grid {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+  flex-wrap: nowrap; /* Prevent wrapping to keep all cards in a single line */
+  overflow-x: auto; /* Allow horizontal scrolling if necessary */
+}
+
+/* Certification Card Styling */
+.certification-card {
+  width: 200px;
+  height: 260px; /* Increase height slightly for more text space */
+  perspective: 1000px;
+}
+
+.certification-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.certification-card:hover .certification-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and Back of the Card */
+.certification-card-front, .certification-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Align text vertically */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Front of the Card */
+.certification-card-front {
+  background-color: #f4f4f9;
+}
+
+.certification-card-front img {
+  width: 80%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Back of the Card */
+.certification-card-back {
+  background-color: #0073e6;
+  color: #fff;
+  padding: 1rem;
+  transform: rotateY(180deg);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.certification-card-back h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.certification-card-back p {
+  font-size: 0.9rem;
+  margin: 0.2rem 0;
+  text-align: center;
+}
+
+
+
+
+/* Download Button */
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0073e6;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.download-button:hover {
+  background-color: #005bb5;
+}
+
+/* Main Content */
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 180px;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #0073e6;
+  padding-bottom: 0.5rem;
+}
+
+p, li {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+
+
+#contact a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+
+/* Download Button within Main Content */
+.resume-button-container {
+display: flex;
+justify-content: center;
+margin-top: 1.5rem;
+}
+
+.download-button {
+padding: 10px 20px;
+background-color: #0073e6;
+color: #fff;
+text-decoration: none;
+border-radius: 5px;
+font-weight: bold;
+transition: background-color 0.3s;
+}
+
+.download-button:hover {
+background-color: #005bb5;
+}
+
+/*   Experience */
+
+.experience-item {
+  margin-bottom: 1.5rem;
+}
+
+.experience-item h3 {
+  font-size: 1.2rem;
+  color: #0073e6;
+}
+
+/* Timeline Layout for Experience Page */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 800px;
+}
+
+.experience-item {
+  display: flex; /* Flex for layout */
+  flex-direction: row; /* Align items in a row */
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+nav a.active {
+  background-color: #0073e6;
+}
+
+.header-content {
+  margin-top: 2rem;
+}
+
+
+
+/* Timeline Info Styling */
+.timeline-info {
+  width: 30%; /* Adjust width as necessary */
+  text-align: left; /* Align text to the left */
+  padding-right: 1rem; /* Space between info and company info */
+}
+
+.timeline-info h3 {
+  color: #0073e6; /* Blue color for job title */
+  margin-bottom: 0.25rem; /* Reduced margin */
+}
+
+.timeline-info p {
+  margin: 0; /* Remove margin */
+}
+
+/* Company Info Styling */
+.company-info {
+  width: 65%; /* Adjust width as necessary */
+  text-align: left; /* Align text to the left */
+}
+
+.company-name {
+  background-color: #80c7ff; /* Light blue background for company name */
+  color: #333; /* Dark text color for contrast */
+  font-weight: bold;
+  padding: 0 0.5rem;
+  border-radius: 5px; /* Rounded corners */
+  margin: 0; /* Remove margin */
+  width: 100%; /* Use full width */
+}
+
+.location {
+  background-color: #e0f7fa; /* Light blue background for location */
+  color: #333; /* Dark text color for contrast */
+  padding: 0 0.5rem; /* Reduced padding for location */
+  margin: 0; /* Remove margin */
+  width: 100%; /* Use full width */
+}
+
+/* Responsibilities Styling */
+.responsibilities {
+  padding: 1rem 0; /* Adjust padding for top and bottom */
+  border-radius: 5px;
+  text-align: left; /* Align text to the left */
+}
+
+/* Achievements List */
+.achievements {
+  padding-left: 0; /* Remove padding to avoid bullets */
+  list-style-type: none; /* Remove bullet points */
+}
+
+.achievements li {
+  margin-bottom: 0.5rem; /* Space between items */
+  padding-left: 1rem; /* Indent each item */
+  position: relative; /* To position pseudo-element */
+}
+
+.achievements li::before {
+  content: '•'; /* Custom bullet */
+  position: absolute; /* Position it */
+  left: 0; /* Align to left */
+  color: #0073e6; /* Color for custom bullet */
+}
+
+
+
+/* Skills Section */
+#skills {
+  
+  margin: 0 auto;
+  padding: 2rem;
+  padding-left: 0 auto;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  margin-left: 0;
+
+}
+
+#skills h2 {
+  text-align:left;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #0073e6;
+  padding-bottom: 0.5rem;
+}
+
+
+.skill-list {
+  display: flex; /* Flexbox for horizontal layout */
+  flex-wrap: wrap; /* Wrap skills to the next line */
+  gap: 1rem; /* Space between skills */
+}
+
+.skill {
+  background-color: #e0f7fa; /* Light blue background for skill items */
+  color: #0073e6; /* Blue text color */
+  padding: 1rem; /* Padding inside skill items */
+  border-radius: 5px; /* Rounded corners */
+  flex: 1 1 calc(25% - 1rem); /* Flex-grow and shrink for responsive layout */
+  text-align: center; /* Center-align text */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  transition: transform 0.3s; /* Smooth scaling effect on hover */
+}
+
+
+.skill-category h3 {
+  font-size: 1.25em;
+  color: #0073e6;
+}
+
+.skill-category p {
+  font-size: 1em;
+}
+
+
+
+
+.skill:hover {
+  transform: scale(1.05); /* Scale up skill item on hover */
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.skill-box {
+  background-color: #f4f4f9;
+  border: 1px solid #0073e6;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  border-radius: 5px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.skill-box:hover {
+  transform: scale(1.05);
+  background-color: #e0f7fa;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.tab-button {
+  padding: 0.5rem 1rem;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.tab-button:hover,
+.tab-button.active {
+  background-color: #005bb5;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* General Styles for Lists */
+ul {
+  list-style-type: none; /* Remove bullet points */
+  padding-left: 0; /* Remove padding */
+}
+
+/* Education Section */
+#education {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.degrees {
+  display: flex;
+  gap: 12px;
+}
+
+/* Degree Card Container */
+.degree-card {
+  width: 100%;
+  max-width: 400px; /* Set a maximum width */
+  height: 250px; /* Adjust height for your needs */
+  margin: 2rem auto;
+  perspective: 1000px;
+  
+}
+
+.degree-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+
+.degree-card:hover .degree-card-inner {
+  transform: rotateY(180deg);
+}
+/* Front and Back of the Card */
+.degree-card-front, .degree-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.degree-card-front {
+  background-color: #f9f9f9;
+  color: #333;
+}
+.degree-image {
+    width: 80%; /* Adjust width as necessary */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: add some rounding */
+    margin-bottom: 1rem; /* Space between image and text */
+}
+
+.degree-card-back {
+  background-color: #0073e6;
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+.degree-card h3, .degree-card h4 {
+  margin-bottom: 1rem;
+}
+
+.degree-card ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+.degree-card li {
+  margin-bottom: 0.5rem;
+}
+
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-info {
+  margin-bottom: 0.5rem;
+}
+
+.contact-info p {
+  margin: 0.2rem 0;
+}
+
+
+
+
+.footer-bottom {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #bbb;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+html {
+  scroll-padding-top: 180px; /* Offset by the height of the header */
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-icon {
+  margin: 0 8px;
+  font-size: 36px; /* Increase the icon size */
+  color: #0073e6; /* Match with your color scheme */
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #005bb5; /* Darker shade on hover */
+}
