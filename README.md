@@ -52,7 +52,7 @@ Contact
 
 Your Name
 
-	•	Email: vinay.kumar@mycvtalent.com
-	•	LinkedIn: https://www.linkedin.com/in/vinay-kumar-442b7b306/
+	•	Email: vinay.c@themailpad.com
+	•	LinkedIn: https://www.linkedin.com/in/c-vinay/
 
 Let me know if you’d like any adjustments, like specific setup commands or additional project information!
